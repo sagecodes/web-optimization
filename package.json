@@ -1,0 +1,22 @@
+{
+  "name": "web-optimization",
+  "version": "1.0.0",
+  "description": "Project 4 for Udacity front end developer nanodegree. Optimize index file to have page speeds of 90 or more",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sageio/web-optimization.git"
+  },
+  "author": "Sage Elliott",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sageio/web-optimization/issues"
+  },
+  "homepage": "https://github.com/sageio/web-optimization#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0"
+  }
+}
