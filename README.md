@@ -23,11 +23,13 @@ Page speeds are now at 93 - 95. Further performance enhancements could be made o
 
 To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
 
-**What was done to meet requiremnst for task 2:**
 
-- Refactor changePizzaSizes. no more query selcting or conversions back to pixel and percentages(Similar to solutionin lesson 5). *Resize time is now Aprox 1.7ms.*
+**What was done to meet requirements for task 2:**
 
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+- Refactor changePizzaSizes. no more query selecting for each element or conversions back to pixel and percentages(Similar to solution in lesson 5). *Resize time is now Aprox 1.7ms.*
+- re-factor for loop and scroll events/animations. *page now scrolls smoothly. scroll animations are often under 1ms. occasionally longer animations show in dev-tools, but have not been notable in user experience.*
+- minify js file
+
 
 
 ### How to run the project
@@ -51,23 +53,9 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! * Note that the first time you run it you may get a slow server response time. If that's the case please re-analyze.
 
 
-### Other sources I used:
-Treehouse Gulp basics
-https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js
-https://css-tricks.com/gulp-for-beginners/
-https://developers.google.com/speed/pagespeed/insights/
-http://www.html5rocks.com/en/tutorials/speed/animations/
+### Other sources used:
 
-### Optimization Tips and Tricks
-* [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
-* [Analyzing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/analyzing-crp.html "analyzing crp")
-* [Optimizing the Critical Rendering Path](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/optimizing-critical-rendering-path.html "optimize the crp!")
-* [Avoiding Rendering Blocking CSS](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/render-blocking-css.html "render blocking css")
-* [Optimizing JavaScript](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/adding-interactivity-with-javascript.html "javascript")
-* [Measuring with Navigation Timing](https://developers.google.com/web/fundamentals/performance/critical-rendering-path/measure-crp.html "nav timing api"). We didn't cover the Navigation Timing API in the first two lessons but it's an incredibly useful tool for automated page profiling. I highly recommend reading.
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/eliminate-downloads.html">The fewer the downloads, the better</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html">Reduce the size of text</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
-* <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
-
-
+- Treehouse Gulp basics
+- [Gulp for beginners - css tricks](https://css-tricks.com/gulp-for-beginners/)
+- [page speed insights - google](https://developers.google.com/speed/pagespeed/insights/)
+- [speed animations - html5Rocks](http://www.html5rocks.com/en/tutorials/speed/animations/)
