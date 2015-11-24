@@ -12,10 +12,10 @@ What was done to exceed requirments of task 1:
     - Minify Javascript files
     - minify HTML files
     - OPtimize images
-- Manually optimized pizzeria.jpg to change the demensions
+- Manually optimized pizzeria.jpg to change the dimensions
 - Move link to load css files to the bottom of the html body to offset render blocking
 
-Page speeds are now at 93 - 95. Further performance enhanments could be made on the server side. Future improvments include: More Stremlined gulp tasks(or run multiple tasks), inline css and JS when appropriate.
+Page speeds are now at 93 - 95. Further performance enhancements could be made on the server side. Future improvements include: More Streamlined gulp tasks(or run multiple tasks), inline-css and JS when appropriate.
 
 
 
@@ -63,11 +63,5 @@ https://css-tricks.com/gulp-for-beginners/
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/optimize-encoding-and-transfer.html">Reduce the size of text</a>
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/image-optimization.html">Optimize images</a>
 * <a href="https://developers.google.com/web/fundamentals/performance/optimizing-content-efficiency/http-caching.html">HTTP caching</a>
-
-### Customization with Bootstrap
-The portfolio was built on Twitter's <a href="http://getbootstrap.com/">Bootstrap</a> framework. All custom styles are in `dist/css/portfolio.css` in the portfolio repo.
-
-* <a href="http://getbootstrap.com/css/">Bootstrap's CSS Classes</a>
-* <a href="http://getbootstrap.com/components/">Bootstrap's Components</a>
 
 
