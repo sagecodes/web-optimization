@@ -44,7 +44,7 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
   $> ngrok 8080
   ```
 
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
+1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! * Note that the first time you run it you may get a slow server response time. If that's the case please re-analyze.
 
 
 ### Other sources I used:
