@@ -4,11 +4,29 @@ Your challenge, if you wish to accept it (and we sure hope you will), is to opti
 
 To get started, check out the repository, inspect the code,
 
-### Getting started
-
 ####Part 1: Optimize PageSpeed Insights score for index.html
+What was done to exceed requirments of task 1:
 
-Some useful tips to help you get started:
+- Utilized gulp.js to:
+    - Minify and concatenate CSS files
+    - Minify Javascript files
+    - minify HTML files
+    - OPtimize images
+- Manually optimized pizzeria.jpg to change the demensions
+- Move link to load css files to the bottom of the html body to offset render blocking
+
+Page speeds are now at 93 - 95. Further performance enhanments could be made on the server side. Future improvments include: More Stremlined gulp tasks(or run multiple tasks), inline css and JS when appropriate.
+
+
+
+####Part 2: Optimize Frames per Second in pizza.html
+
+To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
+
+You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
+
+
+### How to run the project
 
 1. Check out the repository
 1. To inspect the site on your phone, you can run a local server
@@ -28,13 +46,6 @@ Some useful tips to help you get started:
 
 1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! Optional: [More on integrating ngrok, Grunt and PageSpeed.](http://www.jamescryer.com/2014/06/12/grunt-pagespeed-and-ngrok-locally-testing/)
 
-Profile, optimize, measure... and then lather, rinse, and repeat. Good luck!
-
-####Part 2: Optimize Frames per Second in pizza.html
-
-To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
-
-You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
 ### Other sources I used:
 Treehouse Gulp basics
