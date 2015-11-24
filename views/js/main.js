@@ -484,17 +484,37 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
   console.log("Average time to generate last 10 frames: " + sum / 10 + "ms");
 }
 
-// The following code for sliding background pizzas was pulled from Ilya's demo found at:
-// https://www.igvita.com/slides/2012/devtools-tips-and-tricks/jank-demo.html
+var latestKnownScrollY = 0;
+var ticking = true;
+
+function onScroll() {
+  latestKnownScrollY = window.scrollY;
+  requestTick();
+}
+
+// #optimize: when scrolls, calls `requestAnimationFrame`,
+// but doesn't initiate another
+function requestTick() {
+  if (!ticking) {
+    requestAnimationFrame(updatePositions);
+  }
+  ticking = true;
+}
+
 
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
+  ticking = false;
   frame++;
   window.performance.mark("mark_start_frame");
 
   var items = document.querySelectorAll('.mover');
+
+  var currentScrollY = latestKnownScrollY / 1250;
+  var phase;
   for (var i = 0; i < items.length; i++) {
-    var phase = Math.sin((document.body.scrollTop / 1250) + (i % 5));
+
+    phase = Math.sin(currentScrollY + (i % 5));
     items[i].style.left = items[i].basicLeft + 100 * phase + 'px';
   }
 
@@ -509,7 +529,7 @@ function updatePositions() {
 }
 
 // runs updatePositions on scroll
-window.addEventListener('scroll', updatePositions);
+window.addEventListener('scroll', onScroll);
 
 // Generates the sliding pizzas when the page loads.
 document.addEventListener('DOMContentLoaded', function() {

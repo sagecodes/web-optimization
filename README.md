@@ -5,7 +5,7 @@ Your challenge, if you wish to accept it (and we sure hope you will), is to opti
 To get started, check out the repository, inspect the code,
 
 ####Part 1: Optimize PageSpeed Insights score for index.html
-What was done to exceed requirments of task 1:
+**What was done to exceed requirments of task 1:**
 
 - Utilized gulp.js to:
     - Minify and concatenate CSS files
@@ -15,13 +15,17 @@ What was done to exceed requirments of task 1:
 - Manually optimized pizzeria.jpg to change the dimensions
 - Move link to load css files to the bottom of the html body to offset render blocking
 
-Page speeds are now at 93 - 95. Further performance enhancements could be made on the server side. Future improvements include: More Streamlined gulp tasks(or run multiple tasks), inline-css and JS when appropriate.
+Page speeds are now at 93 - 95. Further performance enhancements could be made on the server side. Future improvements include: More Streamlined gulp tasks(or run multiple tasks), inline-css and JS when appropriate, use script to load in css with async property.
 
 
 
 ####Part 2: Optimize Frames per Second in pizza.html
 
 To optimize views/pizza.html, you will need to modify views/js/main.js until your frames per second rate is 60 fps or higher. You will find instructive comments in main.js.
+
+**What was done to meet requiremnst for task 2:**
+
+- Refactor changePizzaSizes. no more query selcting or conversions back to pixel and percentages(Similar to solutionin lesson 5). *Resize time is now Aprox 1.7ms.*
 
 You might find the FPS Counter/HUD Display useful in Chrome developer tools described here: [Chrome Dev Tools tips-and-tricks](https://developer.chrome.com/devtools/docs/tips-and-tricks).
 
@@ -51,6 +55,8 @@ You might find the FPS Counter/HUD Display useful in Chrome developer tools desc
 Treehouse Gulp basics
 https://scotch.io/tutorials/automate-your-tasks-easily-with-gulp-js
 https://css-tricks.com/gulp-for-beginners/
+https://developers.google.com/speed/pagespeed/insights/
+http://www.html5rocks.com/en/tutorials/speed/animations/
 
 ### Optimization Tips and Tricks
 * [Optimizing Performance](https://developers.google.com/web/fundamentals/performance/ "web performance")
