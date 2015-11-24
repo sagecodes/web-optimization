@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var rename = require('gulp-rename');
 var minifyCSS = require('gulp-minify-css');
 var imagemin = require('gulp-imagemin');
+var minifyHTML = require('gulp-minify-html');
 
 // Concat multiple JS files
 gulp.task("concatScripts", function(){
@@ -40,6 +41,14 @@ gulp.task('minifyCSS', function() {
         .pipe(minifyCSS())
         .pipe(rename('main.min.css'))
         .pipe(gulp.dest('css'));
+});
+
+// Minify HTML
+gulp.task('minifyHTML', function() {
+    gulp.src("dev-index.html")
+        .pipe(minifyHTML())
+        .pipe(rename('index.html'))
+        .pipe(gulp.dest(''));
 });
 
 // optimize images
