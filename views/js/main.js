@@ -484,23 +484,25 @@ function logAverageFrame(times) {   // times is the array of User Timing measure
   console.log("Average time to generate last 10 frames: " + sum / 10 + "ms");
 }
 
+// declare latest known scroll position. Set to 0.
 var latestKnownScrollY = 0;
+// Set ticking to true
 var ticking = true;
 
+// Scroll callback utilizing latestKnownScrollY and window event listener
 function onScroll() {
   latestKnownScrollY = window.scrollY;
   requestTick();
 }
 
-// #optimize: when scrolls, calls `requestAnimationFrame`,
-// but doesn't initiate another
+// use requestAnimationFrame only when scrolling
+// used great tips from http://www.html5rocks.com/en/tutorials/speed/animations/
 function requestTick() {
   if (!ticking) {
     requestAnimationFrame(updatePositions);
   }
   ticking = true;
 }
-
 
 // Moves the sliding background pizzas based on scroll position
 function updatePositions() {
@@ -529,6 +531,7 @@ function updatePositions() {
 }
 
 // runs updatePositions on scroll
+// change to use onScroll function previously made
 window.addEventListener('scroll', onScroll);
 
 // Generates the sliding pizzas when the page loads.
