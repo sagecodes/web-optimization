@@ -510,7 +510,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.querySelectorAll('.mover');
+  var items = document.getElementsByClassName()('mover');
 
   var currentScrollY = latestKnownScrollY / 1250;
   var phase;
