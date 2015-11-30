@@ -510,7 +510,7 @@ function updatePositions() {
   frame++;
   window.performance.mark("mark_start_frame");
 
-  var items = document.getElementsByClassName()('mover');
+  var items = document.getElementsByClassName('mover');
 
   var currentScrollY = latestKnownScrollY / 1250;
   var phase;
@@ -538,7 +538,6 @@ window.addEventListener('scroll', onScroll);
 document.addEventListener('DOMContentLoaded', function() {
   var cols = 8;
   var s = 256;
-  var moveingPizza = document.getElementById("movingPizzas1")
   for (var i = 0; i < 35; i++) {
     var elem = document.createElement('img');
     elem.className = 'mover';
@@ -547,8 +546,7 @@ document.addEventListener('DOMContentLoaded', function() {
     elem.style.width = "73.333px";
     elem.basicLeft = (i % cols) * s;
     elem.style.top = (Math.floor(i / cols) * s) + 'px';
-    movingPizza.appendChild(elem);
-
+    document.getElementById("movingPizzas1").appendChild(elem);
   }
   updatePositions();
 });
