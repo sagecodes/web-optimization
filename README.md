@@ -26,10 +26,15 @@ To optimize views/pizza.html, you will need to modify views/js/main.js until you
 
 **What was done to meet requirements for task 2:**
 
-- Refactor changePizzaSizes. no more query selecting for each element or conversions back to pixel and percentages(Similar to solution in lesson 5). *Resize time is now Aprox 1.7ms.*
-- re-factor for loop and scroll events/animations. *page now scrolls smoothly. scroll animations are often under 1ms. occasionally longer animations show in dev-tools, but have not been notable in user experience.*
-- minify js file
+- Re-factor changePizzaSizes. no more query selecting for each element or conversions back to pixel and percentages(Similar to solution in lesson 5).
+- change query sector to search for only ID *Resize time is now Aprox 0.6ms.*
+- re-factor for loop and scroll events/animations.
+- reduce number of pizzas to amount of pizzas that are visible
+- Move calls to document objects outside of for loops
+- update jquery queries to be class or ID Specific when possible
+- minify js file *When page is constantly scrolling FPS is 60. 10 frames are generated in 0.3ms or lower*
 
+See live demo [here](http://sageio.github.io/web-optimization/)
 
 
 ### How to run the project
