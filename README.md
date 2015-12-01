@@ -34,7 +34,7 @@ To optimize views/pizza.html, you will need to modify views/js/main.js until you
 - update jquery queries to be class or ID Specific when possible
 - minify js file *When page is constantly scrolling FPS is 60. 10 frames are generated in 0.3ms or lower*
 
-See live demo [here](http://sageio.github.io/web-optimization/)
+See live demo [here](http://sageio.github.io/web-optimization/production/)
 
 
 ### How to run the project
