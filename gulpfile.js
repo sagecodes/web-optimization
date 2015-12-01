@@ -22,7 +22,7 @@ gulp.task('minifyScripts', function() {
     gulp.src("js/perfmatters.js")
         .pipe(uglify())
         .pipe(rename('app.min.js'))
-        .pipe(gulp.dest('js'));
+        .pipe(gulp.dest('production/js'));
 });
 
 // Concat CSS
@@ -40,15 +40,15 @@ gulp.task('minifyCSS', function() {
     gulp.src("css/main.css")
         .pipe(minifyCSS())
         .pipe(rename('main.min.css'))
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('production/css'));
 });
 
 // Minify HTML
 gulp.task('minifyHTML', function() {
-    gulp.src("dev-index.html")
+    gulp.src("index.html")
         .pipe(minifyHTML())
         .pipe(rename('index.html'))
-        .pipe(gulp.dest(''));
+        .pipe(gulp.dest('production'));
 });
 
 // optimize images
@@ -56,7 +56,7 @@ gulp.task('images', function(){
   return gulp.src(['img/**/*.+(png|jpg|gif|svg)',
                     'views/images//**/*.+(png|jpg|gif|svg)'])
   .pipe(imagemin())
-  .pipe(gulp.dest('dist/images'))
+  .pipe(gulp.dest('production/img'))
 });
 
 // test task

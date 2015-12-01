@@ -52,10 +52,14 @@ See live demo [here](http://sageio.github.io/web-optimization/)
 
   ``` bash
   $> cd /path/to/your-project-folder
-  $> ngrok 8080
+  $> ngrok http 8080
+  #if that fails please try:
+  $> ./ngrok http 8080
   ```
 
-1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights! * Note that the first time you run it you may get a slow server response time. If that's the case please re-analyze.
+1. Copy the public URL ngrok gives you and try running it through PageSpeed Insights!
+
+* Note that the production ready files are in the production sub folder. be sure to add '/production' to the URL ngrok gives you
 
 
 ### Other sources used:
